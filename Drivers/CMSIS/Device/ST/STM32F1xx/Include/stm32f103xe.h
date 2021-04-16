@@ -9,7 +9,7 @@
   *          This file contains:
   *           - Data structures and the address mapping for all peripherals
   *           - Peripheral's registers declarations and bits definition
-  *           - Macros to access peripheralï¿½s registers hardware
+  *           - Macros to access peripheral’s registers hardware
   *  
   ******************************************************************************
   * @attention
@@ -5549,12 +5549,12 @@ typedef struct
 /*******************  Bit definition for SDIO_ARG register  *******************/
 #define SDIO_ARG_CMDARG_Pos                 (0U)                               
 #define SDIO_ARG_CMDARG_Msk                 (0xFFFFFFFFUL << SDIO_ARG_CMDARG_Pos) /*!< 0xFFFFFFFF */
-#define SDIO_ARG_CMDARG                     SDIO_ARG_CMDARG_Msk                /*!< RelayCommand argument */
+#define SDIO_ARG_CMDARG                     SDIO_ARG_CMDARG_Msk                /*!< Command argument */
 
 /*******************  Bit definition for SDIO_CMD register  *******************/
 #define SDIO_CMD_CMDINDEX_Pos               (0U)                               
 #define SDIO_CMD_CMDINDEX_Msk               (0x3FUL << SDIO_CMD_CMDINDEX_Pos)   /*!< 0x0000003F */
-#define SDIO_CMD_CMDINDEX                   SDIO_CMD_CMDINDEX_Msk              /*!< RelayCommand Index */
+#define SDIO_CMD_CMDINDEX                   SDIO_CMD_CMDINDEX_Msk              /*!< Command Index */
 
 #define SDIO_CMD_WAITRESP_Pos               (6U)                               
 #define SDIO_CMD_WAITRESP_Msk               (0x3UL << SDIO_CMD_WAITRESP_Pos)    /*!< 0x000000C0 */
@@ -5570,7 +5570,7 @@ typedef struct
 #define SDIO_CMD_WAITPEND                   SDIO_CMD_WAITPEND_Msk              /*!< CPSM Waits for ends of data transfer (CmdPend internal signal) */
 #define SDIO_CMD_CPSMEN_Pos                 (10U)                              
 #define SDIO_CMD_CPSMEN_Msk                 (0x1UL << SDIO_CMD_CPSMEN_Pos)      /*!< 0x00000400 */
-#define SDIO_CMD_CPSMEN                     SDIO_CMD_CPSMEN_Msk                /*!< RelayCommand path state machine (CPSM) Enable bit */
+#define SDIO_CMD_CPSMEN                     SDIO_CMD_CPSMEN_Msk                /*!< Command path state machine (CPSM) Enable bit */
 #define SDIO_CMD_SDIOSUSPEND_Pos            (11U)                              
 #define SDIO_CMD_SDIOSUSPEND_Msk            (0x1UL << SDIO_CMD_SDIOSUSPEND_Pos) /*!< 0x00000800 */
 #define SDIO_CMD_SDIOSUSPEND                SDIO_CMD_SDIOSUSPEND_Msk           /*!< SD I/O suspend command */
@@ -5667,13 +5667,13 @@ typedef struct
 /******************  Bit definition for SDIO_STA register  ********************/
 #define SDIO_STA_CCRCFAIL_Pos               (0U)                               
 #define SDIO_STA_CCRCFAIL_Msk               (0x1UL << SDIO_STA_CCRCFAIL_Pos)    /*!< 0x00000001 */
-#define SDIO_STA_CCRCFAIL                   SDIO_STA_CCRCFAIL_Msk              /*!< RelayCommand response received (CRC check failed) */
+#define SDIO_STA_CCRCFAIL                   SDIO_STA_CCRCFAIL_Msk              /*!< Command response received (CRC check failed) */
 #define SDIO_STA_DCRCFAIL_Pos               (1U)                               
 #define SDIO_STA_DCRCFAIL_Msk               (0x1UL << SDIO_STA_DCRCFAIL_Pos)    /*!< 0x00000002 */
 #define SDIO_STA_DCRCFAIL                   SDIO_STA_DCRCFAIL_Msk              /*!< Data block sent/received (CRC check failed) */
 #define SDIO_STA_CTIMEOUT_Pos               (2U)                               
 #define SDIO_STA_CTIMEOUT_Msk               (0x1UL << SDIO_STA_CTIMEOUT_Pos)    /*!< 0x00000004 */
-#define SDIO_STA_CTIMEOUT                   SDIO_STA_CTIMEOUT_Msk              /*!< RelayCommand response timeout */
+#define SDIO_STA_CTIMEOUT                   SDIO_STA_CTIMEOUT_Msk              /*!< Command response timeout */
 #define SDIO_STA_DTIMEOUT_Pos               (3U)                               
 #define SDIO_STA_DTIMEOUT_Msk               (0x1UL << SDIO_STA_DTIMEOUT_Pos)    /*!< 0x00000008 */
 #define SDIO_STA_DTIMEOUT                   SDIO_STA_DTIMEOUT_Msk              /*!< Data timeout */
@@ -5685,10 +5685,10 @@ typedef struct
 #define SDIO_STA_RXOVERR                    SDIO_STA_RXOVERR_Msk               /*!< Received FIFO overrun error */
 #define SDIO_STA_CMDREND_Pos                (6U)                               
 #define SDIO_STA_CMDREND_Msk                (0x1UL << SDIO_STA_CMDREND_Pos)     /*!< 0x00000040 */
-#define SDIO_STA_CMDREND                    SDIO_STA_CMDREND_Msk               /*!< RelayCommand response received (CRC check passed) */
+#define SDIO_STA_CMDREND                    SDIO_STA_CMDREND_Msk               /*!< Command response received (CRC check passed) */
 #define SDIO_STA_CMDSENT_Pos                (7U)                               
 #define SDIO_STA_CMDSENT_Msk                (0x1UL << SDIO_STA_CMDSENT_Pos)     /*!< 0x00000080 */
-#define SDIO_STA_CMDSENT                    SDIO_STA_CMDSENT_Msk               /*!< RelayCommand sent (no response required) */
+#define SDIO_STA_CMDSENT                    SDIO_STA_CMDSENT_Msk               /*!< Command sent (no response required) */
 #define SDIO_STA_DATAEND_Pos                (8U)                               
 #define SDIO_STA_DATAEND_Msk                (0x1UL << SDIO_STA_DATAEND_Pos)     /*!< 0x00000100 */
 #define SDIO_STA_DATAEND                    SDIO_STA_DATAEND_Msk               /*!< Data end (data counter, SDIDCOUNT, is zero) */
@@ -5700,7 +5700,7 @@ typedef struct
 #define SDIO_STA_DBCKEND                    SDIO_STA_DBCKEND_Msk               /*!< Data block sent/received (CRC check passed) */
 #define SDIO_STA_CMDACT_Pos                 (11U)                              
 #define SDIO_STA_CMDACT_Msk                 (0x1UL << SDIO_STA_CMDACT_Pos)      /*!< 0x00000800 */
-#define SDIO_STA_CMDACT                     SDIO_STA_CMDACT_Msk                /*!< RelayCommand transfer in progress */
+#define SDIO_STA_CMDACT                     SDIO_STA_CMDACT_Msk                /*!< Command transfer in progress */
 #define SDIO_STA_TXACT_Pos                  (12U)                              
 #define SDIO_STA_TXACT_Msk                  (0x1UL << SDIO_STA_TXACT_Pos)       /*!< 0x00001000 */
 #define SDIO_STA_TXACT                      SDIO_STA_TXACT_Msk                 /*!< Data transmit in progress */
@@ -5782,13 +5782,13 @@ typedef struct
 /******************  Bit definition for SDIO_MASK register  *******************/
 #define SDIO_MASK_CCRCFAILIE_Pos            (0U)                               
 #define SDIO_MASK_CCRCFAILIE_Msk            (0x1UL << SDIO_MASK_CCRCFAILIE_Pos) /*!< 0x00000001 */
-#define SDIO_MASK_CCRCFAILIE                SDIO_MASK_CCRCFAILIE_Msk           /*!< RelayCommand CRC Fail Interrupt Enable */
+#define SDIO_MASK_CCRCFAILIE                SDIO_MASK_CCRCFAILIE_Msk           /*!< Command CRC Fail Interrupt Enable */
 #define SDIO_MASK_DCRCFAILIE_Pos            (1U)                               
 #define SDIO_MASK_DCRCFAILIE_Msk            (0x1UL << SDIO_MASK_DCRCFAILIE_Pos) /*!< 0x00000002 */
 #define SDIO_MASK_DCRCFAILIE                SDIO_MASK_DCRCFAILIE_Msk           /*!< Data CRC Fail Interrupt Enable */
 #define SDIO_MASK_CTIMEOUTIE_Pos            (2U)                               
 #define SDIO_MASK_CTIMEOUTIE_Msk            (0x1UL << SDIO_MASK_CTIMEOUTIE_Pos) /*!< 0x00000004 */
-#define SDIO_MASK_CTIMEOUTIE                SDIO_MASK_CTIMEOUTIE_Msk           /*!< RelayCommand TimeOut Interrupt Enable */
+#define SDIO_MASK_CTIMEOUTIE                SDIO_MASK_CTIMEOUTIE_Msk           /*!< Command TimeOut Interrupt Enable */
 #define SDIO_MASK_DTIMEOUTIE_Pos            (3U)                               
 #define SDIO_MASK_DTIMEOUTIE_Msk            (0x1UL << SDIO_MASK_DTIMEOUTIE_Pos) /*!< 0x00000008 */
 #define SDIO_MASK_DTIMEOUTIE                SDIO_MASK_DTIMEOUTIE_Msk           /*!< Data TimeOut Interrupt Enable */
@@ -5800,10 +5800,10 @@ typedef struct
 #define SDIO_MASK_RXOVERRIE                 SDIO_MASK_RXOVERRIE_Msk            /*!< Rx FIFO OverRun Error Interrupt Enable */
 #define SDIO_MASK_CMDRENDIE_Pos             (6U)                               
 #define SDIO_MASK_CMDRENDIE_Msk             (0x1UL << SDIO_MASK_CMDRENDIE_Pos)  /*!< 0x00000040 */
-#define SDIO_MASK_CMDRENDIE                 SDIO_MASK_CMDRENDIE_Msk            /*!< RelayCommand Response Received Interrupt Enable */
+#define SDIO_MASK_CMDRENDIE                 SDIO_MASK_CMDRENDIE_Msk            /*!< Command Response Received Interrupt Enable */
 #define SDIO_MASK_CMDSENTIE_Pos             (7U)                               
 #define SDIO_MASK_CMDSENTIE_Msk             (0x1UL << SDIO_MASK_CMDSENTIE_Pos)  /*!< 0x00000080 */
-#define SDIO_MASK_CMDSENTIE                 SDIO_MASK_CMDSENTIE_Msk            /*!< RelayCommand Sent Interrupt Enable */
+#define SDIO_MASK_CMDSENTIE                 SDIO_MASK_CMDSENTIE_Msk            /*!< Command Sent Interrupt Enable */
 #define SDIO_MASK_DATAENDIE_Pos             (8U)                               
 #define SDIO_MASK_DATAENDIE_Msk             (0x1UL << SDIO_MASK_DATAENDIE_Pos)  /*!< 0x00000100 */
 #define SDIO_MASK_DATAENDIE                 SDIO_MASK_DATAENDIE_Msk            /*!< Data End Interrupt Enable */
@@ -5815,7 +5815,7 @@ typedef struct
 #define SDIO_MASK_DBCKENDIE                 SDIO_MASK_DBCKENDIE_Msk            /*!< Data Block End Interrupt Enable */
 #define SDIO_MASK_CMDACTIE_Pos              (11U)                              
 #define SDIO_MASK_CMDACTIE_Msk              (0x1UL << SDIO_MASK_CMDACTIE_Pos)   /*!< 0x00000800 */
-#define SDIO_MASK_CMDACTIE                  SDIO_MASK_CMDACTIE_Msk             /*!< RelayCommand Acting Interrupt Enable */
+#define SDIO_MASK_CMDACTIE                  SDIO_MASK_CMDACTIE_Msk             /*!< Command Acting Interrupt Enable */
 #define SDIO_MASK_TXACTIE_Pos               (12U)                              
 #define SDIO_MASK_TXACTIE_Msk               (0x1UL << SDIO_MASK_TXACTIE_Pos)    /*!< 0x00001000 */
 #define SDIO_MASK_TXACTIE                   SDIO_MASK_TXACTIE_Msk              /*!< Data Transmit Acting Interrupt Enable */

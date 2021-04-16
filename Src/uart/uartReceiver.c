@@ -18,7 +18,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 void uartReceiver(UART_HandleTypeDef *huart) {
     HAL_UART_Receive_IT(huart, uartState.uartReceiveBuffer4B, 4);
     for (;;) {
-        osDelay(1);
+        osDelay(20);
         if (uartState.isUartRxCplt) {
             HAL_UART_Receive_IT(huart, uartState.uartReceiveBuffer4B, 4);
             uartController(huart, uartState.uartReceiveBuffer4B, 4);

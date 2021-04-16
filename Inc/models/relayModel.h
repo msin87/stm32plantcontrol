@@ -9,4 +9,5 @@
 
 
 void setRelayState(uint8_t commandData[3]);
+uint8_t getRelayState(uint8_t relayId);
 #endif //PLANT_RELAYMODEL_H

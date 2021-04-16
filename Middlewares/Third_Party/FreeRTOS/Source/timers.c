@@ -716,7 +716,7 @@ TickType_t xTimeNow;
 		}
 		#endif /* INCLUDE_xTimerPendFunctionCall */
 
-		/* RelayCommand that are positive are timer commands rather than pended
+		/* Commands that are positive are timer commands rather than pended
 		function calls. */
 		if( xMessage.xMessageID >= ( BaseType_t ) 0 )
 		{

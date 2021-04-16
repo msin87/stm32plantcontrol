@@ -3,11 +3,11 @@
 //
 
 
-#include <uartController.h>
+#include <controllers/uartController.h>
 #include <utils/relayCommands.h>
 #include <utils/relayCmdDecoder.h>
 
-void setRelayState(uint8_t commandData[3]){
+void setRelayState(uint8_t commandData[3]) {
     RelayCommand relayCommand = relayCmdDecoder(commandData);
     switch (relayCommand) {
         case RELAY_1_SET_ON:
@@ -36,5 +36,20 @@ void setRelayState(uint8_t commandData[3]){
             break;
         default:
             return;
+    }
+}
+
+uint8_t getRelayState(uint8_t relayId) {
+    switch (relayId) {
+        case 0:
+            return RELAY1_GPIO_Port->ODR&RELAY1_Pin;
+        case 1:
+            return RELAY1_GPIO_Port->ODR&RELAY2_Pin;
+        case 2:
+            return RELAY1_GPIO_Port->ODR&RELAY3_Pin;
+        case 3:
+            return RELAY1_GPIO_Port->ODR&RELAY4_Pin;
+        default:
+            return 0;
     }
 }

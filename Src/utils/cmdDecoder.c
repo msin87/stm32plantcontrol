@@ -3,7 +3,7 @@
 //
 
 
-#include <relayModel.h>
+#include "models/relayModel.h"
 #include "utils/cmdDecoder.h"
 /**
  *
@@ -20,6 +20,9 @@ UartCommand cmdDecoder(const uint8_t* receiveBuffer){
     switch(receiveBuffer[0]){
         case 0:
             command.commandId = RELAY_CMD;
+            break;
+        case 1:
+            command.commandId = GET_RELAY_STATE;
             break;
         default:
             command.commandId = UNKNOWN;

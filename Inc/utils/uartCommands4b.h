@@ -7,6 +7,7 @@
 #include "stdio.h"
 typedef enum {
     RELAY_CMD,
+    GET_RELAY_STATE,
     UNKNOWN
 } T_Command;
 
